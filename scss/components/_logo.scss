@@ -1,25 +1,25 @@
-.logo {
-  font-family: var(--second-font-family);
-  @include fontmax(700, 26px, 1.2, 0.03em);
-}
+// .logo {
+//   font-family: var(--second-font-family);
+//   @include fontmax(700, 26px, 1.2, 0.03em);
+// }
 
-.logo--firstpart {
-  color: var(--accent-color);
-}
+// .logo--firstpart {
+//   color: var(--accent-color);
+// }
 
-.logo--light-theme {
-  color: var(--logo-top-color);
-}
+// .logo--light-theme {
+//   color: var(--logo-top-color);
+// }
 
-.logo--dark-theme {
-  color: var(--third-text-color);
-}
+// .logo--dark-theme {
+//   color: var(--third-text-color);
+// }
 
-.header__logo {
-  margin-right: 93px;
-}
+// .header__logo {
+//   margin-right: 93px;
+// }
 
-.footer__logo {
-  display: block;
-  margin-bottom: 20px;
-}
+// .footer__logo {
+//   display: block;
+//   margin-bottom: 20px;
+// }
