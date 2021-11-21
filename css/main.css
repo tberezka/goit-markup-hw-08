@@ -92,6 +92,31 @@ button {
   }
 }
 
+.logo {
+  font-family: var(--second-font-family);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.logo--firstpart {
+  color: var(--accent-color);
+}
+
+.logo--light-theme {
+  color: var(--logo-top-color);
+}
+
+.logo--dark-theme {
+  color: var(--third-text-color);
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
 .portfolio {
   display: flex;
   flex-wrap: wrap;
