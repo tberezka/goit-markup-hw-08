@@ -1,0 +1,78 @@
+// Left part of footer
+
+.footer {
+  background-color: var(--first-decor-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__wrapper-general {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.footer__wrapper-left {
+  display: block;
+}
+
+.footer__address:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer__link {
+  font-style: normal;
+  @include fontmin(14px, 1.71, 0.03em);
+}
+
+.footer__link--map {
+  color: var(--third-text-color);
+}
+
+.footer__link--contact {
+  color: var(--address-tex-color);
+}
+
+// Center part of footer
+.footer__wrapper-center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer__title {
+  margin-bottom: 20px;
+
+  @include fontmax(700, 14px, 1.14, 0.03em);
+  text-transform: uppercase;
+  color: var(--third-text-color);
+}
+
+// Right part of footer
+.footer__wrapper-right {
+  margin-right: 0;
+}
+
+.footer__form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.footer__input {
+  display: block;
+  margin-right: 12px;
+
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  @include fontmin(16px, 1.25, 0.03em);
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+}
+
+.footer__icon {
+  margin-left: 10px;
+}
