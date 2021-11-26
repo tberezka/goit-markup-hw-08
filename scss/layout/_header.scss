@@ -1,49 +1,72 @@
-// .header {
-//   background-color: var(--primary-background-color);
-//   border-bottom: 1px solid #ececec;
-// }
+.header {
+  background-color: var(--primary-background-color);
+  border-bottom: 1px solid #ececec;
+}
 
-// .header__container {
-//   display: flex;
-//   align-items: center;
-// }
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-// .header__contacts {
-//   display: flex;
-//   align-items: center;
-//   margin-left: auto;
-// }
+  @media screen and (max-width: 767px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
 
-// .header__item {
-//   display: flex;
-//   align-items: center;
+.header__contacts {
+  display: flex;
 
-//   &:not(:last-child) {
-//     margin-right: 50px;
-//   }
-// }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
-// .header__link {
-//   display: flex;
-//   align-items: center;
-//   @include fontmax(500, 14px, 1.14, 0.02em);
-//   color: var(--second-text-color);
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+  }
 
-//   transition: color var(--transition);
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 
-//   &:hover,
-//   &:focus {
-//     color: var(--accent-color);
-//   }
-// }
+.header__item {
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 
-// .header__icon {
-//   fill: var(--second-text-color);
-//   margin-right: 10px;
-//   transition: fill var(--transition);
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+  }
+}
 
-//   .header__link:hover &,
-//   .header__link:focus & {
-//     fill: var(--accent-color);
-//   }
-// }
+.header__link {
+  display: flex;
+  align-items: center;
+  @include fontmax(500, 14px, 1.14, 0.02em);
+  color: var(--second-text-color);
+
+  transition: color var(--transition);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.header__icon {
+  fill: var(--second-text-color);
+  margin-right: 10px;
+  transition: fill var(--transition);
+
+  .header__link:hover &,
+  .header__link:focus & {
+    fill: var(--accent-color);
+  }
+}

@@ -1,45 +1,201 @@
-// .nav,
-// .nav__list {
-//   display: flex;
-//   align-items: center;
-// }
+.nav,
+.nav__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+}
 
-// .nav__item {
-//   position: relative;
+.nav__item {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
-//   &:not(:last-child) {
-//     margin-right: 50px;
-//   }
-// }
+  @media screen and (min-width: 767px) {
+    position: relative;
 
-// .nav__link {
-//   display: block;
-//   padding-top: 32px;
-//   padding-bottom: 32px;
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
 
-//   @include fontmax(500, 14px, 1.14, 0.02em);
-//   color: var(--primary-text-color);
-//   cursor: pointer;
+.nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
-//   transition: color var(--transition);
+  @include fontmax(500, 14px, 1.14, 0.02em);
+  color: var(--primary-text-color);
+  cursor: pointer;
 
-//   &:hover,
-//   &:focus {
-//     color: var(--accent-color);
-//   }
-// }
+  transition: color var(--transition);
 
-// .nav__link--active {
-//   color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
 
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     display: block;
-//     width: 100%;
-//     height: 4px;
-//     border-radius: 2px;
-//     background-color: var(--accent-color);
-//     bottom: -1px;
-//   }
-// }
+.nav__link--active {
+  color: var(--accent-color);
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+    bottom: -1px;
+  }
+}
+
+.nav__mobile-btn--burger {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  line-height: 0;
+
+  transition: fill var(--transition);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.nav__mobile-modal {
+  position: fixed;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+  padding-left: 40px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  background-color: var(--primary-background-color);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity var(--transition);
+}
+
+.nav__mobile-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.nav__modal-btn--close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  border: none;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  line-height: 0;
+
+  background-color: transparent;
+
+  transition: fill var(--transition);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.nav__modal-item {
+  @include fontmax(500, 40px, 1.18, 0.02em);
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.nav__modal-link {
+  display: block;
+  cursor: pointer;
+
+  color: inherit;
+
+  transition: color var(--transition);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  @media screen and (max-width: 479px) {
+    font-size: 8vw;
+  }
+}
+
+.nav__modal-link--active {
+  color: var(--accent-color);
+}
+
+.nav__modal-tel {
+  @include fontmax(500, 34px, 1.18, 0.02em);
+  color: var(--accent-color);
+
+  @media screen and (max-width: 479px) {
+    font-size: 7.1vw;
+  }
+}
+
+.nav__modal-mail {
+  margin-top: 32px;
+
+  @include fontmax(500, 24px, 1.17, 0.02em);
+  color: var(--second-text-color);
+
+  @media screen and (max-width: 479px) {
+    font-size: 5vw;
+  }
+}
+
+.nav__modal-social {
+  display: flex;
+  margin-top: 64px;
+}
+
+.nav__social-item {
+  padding-right: 10px;
+
+  &:not(:first-child) {
+    padding-left: 10px;
+  }
+
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+
+.nav__social-link {
+  @include fontmax(500, 18px, 1.22, 0.02em);
+  color: var(--accent-color);
+
+  @media screen and (max-width: 479px) {
+    font-size: 3.7vw;
+  }
+}
