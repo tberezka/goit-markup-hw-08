@@ -10,7 +10,7 @@
     ),
     url(../images/hero-mob1x.jpg);
   background-repeat: no-repeat;
-  //   background-position: center;
+  background-position: center;
   background-size: cover;
 
   max-width: 480px;
@@ -19,32 +19,52 @@
   @media screen and (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../images/hero-mob2x.jpg);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-mob2x.jpg);
   }
 
   @media screen and (min-width: 768px) {
-    background-image: url(../images/hero-tablet1x.jpg);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-tablet1x.jpg);
     max-width: 768px;
-  }
 
-  @media screen and (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(../images/hero-tablet2x.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero-tablet2x.jpg);
+    }
   }
 
   @media screen and (min-width: 1200px) {
-    background-image: url(../images/hero-desctop1x.jpg);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-desctop1x.jpg);
     max-width: 1600px;
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
-  }
 
-  @media screen and (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(../images/hero-desctop2x.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero-desctop2x.jpg);
+    }
   }
 }
 
@@ -62,6 +82,10 @@
 
   @media screen and (min-width: 1200px) {
     @include fontmax(900, 44px, 1.36, 0.06em);
-    width: 696px;
+    max-width: 696px;
+  }
+
+  @media screen and (max-width: 479px) {
+    font-size: 5.4vw;
   }
 }
