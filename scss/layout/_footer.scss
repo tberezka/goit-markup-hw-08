@@ -1,78 +1,167 @@
+.footer {
+  background-color: var(--first-decor-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__wrapper-general {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+}
+
 // Left part of footer
 
-// .footer {
-//   background-color: var(--first-decor-color);
-//   padding-top: 60px;
-//   padding-bottom: 60px;
-// }
+.footer__wrapper-left {
+  display: block;
 
-// .footer__wrapper-general {
-//   display: flex;
-//   align-items: baseline;
-//   justify-content: center;
-// }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 
-// .footer__wrapper-left {
-//   display: block;
-// }
+  @media screen and (min-width: 768px) {
+    margin-left: 61px;
+  }
 
-// .footer__address:not(:last-child) {
-//   margin-bottom: 9px;
-// }
+  @media screen and (min-width: 1200px) {
+    margin-left: 0;
+  }
+}
 
-// .footer__link {
-//   font-style: normal;
-//   @include fontmin(14px, 1.71, 0.03em);
-// }
+.footer__address {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+}
 
-// .footer__link--map {
-//   color: var(--third-text-color);
-// }
+.footer__address:not(:last-child) {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 8px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
+}
 
-// .footer__link--contact {
-//   color: var(--address-tex-color);
-// }
+.footer__link {
+  font-style: normal;
+  @include fontmin(14px, 1.71, 0.03em);
+}
+
+.footer__link--map {
+  color: var(--third-text-color);
+}
+
+.footer__link--contact {
+  color: var(--address-tex-color);
+}
 
 // Center part of footer
-// .footer__wrapper-center {
-//   display: block;
-//   margin-right: auto;
-//   margin-left: auto;
-// }
 
-// .footer__title {
-//   margin-bottom: 20px;
+.footer__wrapper-center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 
-//   @include fontmax(700, 14px, 1.14, 0.03em);
-//   text-transform: uppercase;
-//   color: var(--third-text-color);
-// }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 767px) {
+    margin-right: 74px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: auto;
+  }
+}
+
+.footer__title {
+  margin-bottom: 20px;
+
+  @include fontmax(700, 14px, 1.14, 0.03em);
+  text-transform: uppercase;
+  color: var(--third-text-color);
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 7px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 0;
+  }
+}
 
 // Right part of footer
-// .footer__wrapper-right {
-//   margin-right: 0;
-// }
 
-// .footer__form {
-//   display: flex;
-//   margin-top: 20px;
-// }
+.footer__wrapper-right {
+  margin-right: 0;
 
-// .footer__input {
-//   display: block;
-//   margin-right: 12px;
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-//   width: 358px;
-//   height: 50px;
-//   padding: 15px 16px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 0;
+    margin-right: 0;
+  }
+}
 
-//   border: 1px solid rgba(255, 255, 255, 0.3);
-//   border-radius: 4px;
-//   @include fontmin(16px, 1.25, 0.03em);
-//   color: rgba(255, 255, 255, 0.6);
-//   background-color: transparent;
-// }
+.footer__form {
+  display: flex;
+  margin-top: 20px;
 
-// .footer__icon {
-//   margin-left: 10px;
-// }
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
+  }
+}
+
+.footer__field {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+}
+
+.footer__input {
+  display: block;
+  margin-right: 12px;
+
+  // width: 450px;
+  height: 50px;
+  padding: 15px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  @include fontmin(16px, 1.25, 0.03em);
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
+}
+
+.footer__icon {
+  margin-left: 10px;
+}
