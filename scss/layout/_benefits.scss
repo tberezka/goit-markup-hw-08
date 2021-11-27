@@ -1,42 +1,74 @@
-// .benefits {
-//   padding-top: 94px;
-//   background-color: var(--primary-background-color);
-// }
+.benefits {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--primary-background-color);
 
-// .benefits__list {
-//   display: flex;
-//   margin-left: -30px;
-// }
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+  }
+}
 
-// .benefits__item {
-//   flex-basis: calc((100% - 3 * 30px) / 3);
-//   margin-left: 30px;
-// }
+.benefits__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: -30px;
+    flex-wrap: wrap;
+  }
+}
 
-// .benefits__img {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
+.benefits__item {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 
-//   width: 100%;
-//   height: 120px;
-//   margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin-left: 30px;
+    margin-bottom: 30px;
 
-//   border-radius: 4px;
-//   background-color: var(--second-decor-color);
-// }
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
 
-// .benefits__title {
-//   margin-bottom: 10px;
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 4 * 30px) / 4);
+    margin-left: 30px;
+    margin-bottom: 0;
+  }
+}
 
-//   @include fontmin(14px, 1.14, 0.03em);
-//   text-transform: uppercase;
+.benefits__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-//   color: var(--primary-text-color);
-// }
+  width: 100%;
+  height: 120px;
+  margin-bottom: 30px;
 
-// .benefits__text {
-//   @include fontmin(14px, 1.71, 0.03em);
+  border-radius: 4px;
+  background-color: var(--second-decor-color);
+}
 
-//   color: var(--second-text-color);
-// }
+.benefits__title {
+  margin-bottom: 10px;
+
+  @include fontmin(14px, 1.14, 0.03em);
+  text-transform: uppercase;
+  text-align: center;
+
+  color: var(--primary-text-color);
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.benefits__text {
+  @include fontmin(14px, 1.71, 0.03em);
+
+  color: var(--second-text-color);
+}
