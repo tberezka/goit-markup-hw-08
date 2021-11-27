@@ -307,14 +307,13 @@ button {
 .nav__mobile-modal {
   position: fixed;
   z-index: 10;
-  overflow: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   padding-left: 40px;
   padding-top: 48px;
   padding-bottom: 48px;
