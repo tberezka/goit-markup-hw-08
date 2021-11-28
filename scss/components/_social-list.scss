@@ -48,9 +48,9 @@
 
 .social-list__icon--theme-dark {
   fill: var(--third-text-color);
-}
 
-.social-list__link--theme-dark:hover .social-list__icon--theme-darkn,
-.social-list__link--theme-dark:focus .social-list__icon--theme-dark {
-  fill: var(--third-text-color);
+  .social-list__link--theme-dark:hover &,
+  .social-list__link--theme-dark:focus & {
+    fill: var(--third-text-color);
+  }
 }

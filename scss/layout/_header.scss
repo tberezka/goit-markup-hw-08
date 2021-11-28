@@ -49,7 +49,7 @@
 .header__link {
   display: flex;
   align-items: center;
-  @include fontmax(500, 14px, 1.14, 0.02em);
+
   color: var(--second-text-color);
 
   transition: color var(--transition);
@@ -58,15 +58,45 @@
   &:focus {
     color: var(--accent-color);
   }
+
+  @media screen and (min-width: 768px) {
+    @include fontmax(500, 12px, 1.17, 0.02em);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include fontmax(500, 14px, 1.14, 0.02em);
+  }
 }
 
 .header__icon {
   fill: var(--second-text-color);
-  margin-right: 10px;
+  margin-right: 8px;
   transition: fill var(--transition);
 
   .header__link:hover &,
   .header__link:focus & {
     fill: var(--accent-color);
+  }
+}
+
+.header__icon--mail {
+  @media screen and (min-width: 768px) {
+    width: 14px;
+    height: 10px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.header__icon--tel {
+  @media screen and (min-width: 768px) {
+    width: 10px;
+    height: 14px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 10px;
+    height: 16px;
   }
 }
