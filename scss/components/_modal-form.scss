@@ -105,6 +105,10 @@
   @include fontmin(12px, 1.17, 0.03em);
   color: var(--second-text-color);
 
+  @media screen and (max-width: 479px) {
+    font-size: 2.2vw;
+  }
+
   @media screen and (min-width: 1200px) {
     @include fontmin(14px, 1.71, 0.03em);
   }

@@ -14,6 +14,10 @@
   border-radius: 4px;
   background-color: var(--primary-background-color);
 
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+
   @media screen and (min-width: 1200px) {
     width: 528px;
   }

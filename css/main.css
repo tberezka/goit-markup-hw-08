@@ -267,6 +267,12 @@ button {
   background-color: var(--primary-background-color);
 }
 
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
@@ -410,6 +416,12 @@ button {
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
+}
+
+@media screen and (max-width: 479px) {
+  .modal-form__label {
+    font-size: 2.2vw;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1358,6 +1370,7 @@ button {
 @media screen and (min-width: 1200px) {
   .footer__wrapper-center {
     margin-right: auto;
+    margin-left: 70px;
   }
 }
 
