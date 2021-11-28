@@ -1,14 +1,20 @@
 .card {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-bottom: 30px;
-
   transition: box-shadow var(--transition);
 
   &:hover,
   &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    flex-basis: calc(100% / 2 - 30px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - 30px);
   }
 }
 
@@ -39,11 +45,37 @@
 }
 
 .card__wrapper {
-  width: 370px;
-  padding: 20px 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  // padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+
+  @media screen and (max-width: 767px) {
+    max-width: 450px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 354px;
+
+    // &:first-child {
+    //   //   height: 145px;
+    //   padding-bottom: 54px;
+    // }
+  }
+
+  //   &::first-child {
+  //     @media screen and (min-width: 768px) {
+  //       padding-bottom: 54px;
+  //     }
+  //   }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 370px;
+  }
 }
 
 .card__title {
